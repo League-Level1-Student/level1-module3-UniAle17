@@ -38,6 +38,7 @@ public class Jeopardy implements ActionListener {
 	public static void main(String[] args) {
 		new Jeopardy().start();
 	}
+	// Return your new button inst
 
 	private void start() {
 		JFrame frame = new JFrame();
@@ -60,20 +61,25 @@ public class Jeopardy implements ActionListener {
 		
 		// 6. Use the createButton method to set the value of firstButton 
 		
-		JButton one = createButton("500");
+		firstButton = createButton("500");
 	
 	// 7. Add the firstButton to the quizPanel
 		quizPanel.add(firstButton);
 		
 		// 8. Write the code inside the createButton() method below. Check that your game looks like Figure 1 in the Jeopardy Handout - http://bit.ly/1bvnvd4.
 		
+		
 		// 9. Use the secondButton variable to hold a button using the createButton method
+	firstButton = createButton("200");
 		
 		// 10. Add the secondButton to the quizPanel
+		quizPanel.add(secondButton);
 		
 		// 11. Add action listeners to the buttons (2 lines of code)
-	
-
+	firstButton.addActionListener(null);
+	secondButton.addActionListener(null);
+	thirdButton.addActionListener(null);
+	fourthButton.addActionListener(null);
 		// 12. Fill in the actionPerformed() method below
 				
 		frame.pack();
@@ -93,14 +99,15 @@ public class Jeopardy implements ActionListener {
 	
 	private JButton createButton(String dollarAmount) {
 		// Create a new JButton
+		JButton chip = new JButton();
 		
 		// Set the text of the button to the dollarAmount
-		
+		chip.setText(dollarAmount);
 		// Increment the buttonCount (this should make the layout vertical)
-	
+		buttonCount= buttonCount+1;
 		// Return your new button instead of the temporary button
+		return chip;
 		
-		return new JButton("temporary button");
 	}
 
 	public void actionPerformed(ActionEvent arg0) {
