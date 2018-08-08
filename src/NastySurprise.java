@@ -11,35 +11,41 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 public class NastySurprise implements ActionListener {
+	JButton trick = new JButton();
+	
+	JButton treat = new JButton();
+	
 	NastySurprise(){
+	
 		JFrame b = new JFrame();
 	
 	JPanel a = new JPanel();
 	
 	
-	
+	b.setVisible(true);
 	b.add(a);
 	a.add(treat);
 	a.add(trick);
 	b.setSize(250,250);
-	b.setVisible(true);
+	
 	
 	trick.setText("Trick");
 	
 	treat.setText("Treat");
 	
+	trick.addActionListener(this);
+	
+	treat.addActionListener(this);
 	}
 		
 	
 	
 	
-	JButton trick = new JButton();
-	
-	JButton treat = new JButton();
+
 	
 	
 public static void main(String[] args) {
-	
+	NastySurprise blue = new NastySurprise();
 
 	
 	
@@ -71,8 +77,15 @@ public void actionPerformed(ActionEvent e) {
 	// TODO Auto-generated method stub
 	JButton buttonPress = (JButton)e.getSource();
 	if(buttonPress==trick) {
-		
+		showPictureFromTheInternet("http://cdn.akc.org/content/hero/puppy-boundaries_header.jpg");
 	}
 
+
+if(buttonPress==treat) {
+	showPictureFromTheInternet("https://media.tenor.com/images/4c6b9e07939a6fcb05c7096da8cbb1cd/tenor.png");
+	
 }
-}
+
+
+}}
+
